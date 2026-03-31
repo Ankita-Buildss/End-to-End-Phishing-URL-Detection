@@ -1,0 +1,45 @@
+data:
+  file_path: "/Users/ankita/Documents/Project_Portfolio/LLMOPS/End to End Phishing URL Detection/data/phising.csv"
+  target_column: Result
+  test_size: 0.2
+  random_state: 42
+
+artifacts:
+  directory: artifacts
+  scaler_filename: scaler.pkl
+  xgb_model_filename: xgb_model.pkl
+  ann_model_filename: ann_mlp_model.pkl
+
+scaler:
+  type: StandardScaler
+
+xgboost:
+  n_estimators: 100      # was 400 — reduce overfitting
+  max_depth: 3           # was 7 — much shallower trees
+  learning_rate: 0.1     # was 0.04
+  subsample: 0.8
+  colsample_bytree: 0.8
+  gamma: 1.0             # was 0.2 — more conservative
+  min_child_weight: 5    # was 3 — more conservative
+  reg_alpha: 1.0         # was 0.3 — stronger regularization
+  reg_lambda: 2.0        # was 1 — stronger regularization
+  scale_pos_weight: 1
+  n_jobs: -1
+  eval_metric: logloss
+
+# ========================
+# ANN (MLPClassifier) CONFIG
+# ========================
+mlp:
+  hidden_layers:
+    - 128
+    - 64
+    - 32
+  activation: relu
+  solver: adam
+  learning_rate_init: 0.001
+  alpha: 0.0005
+  batch_size: 64
+  max_iter: 400
+  early_stopping: true
+  validation_fraction: 0.1

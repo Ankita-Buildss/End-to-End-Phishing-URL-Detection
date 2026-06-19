@@ -71,3 +71,5 @@ Thumbs.db
 
 # Coverage reports
 coverage.xml
+
+echo "mlruns/"

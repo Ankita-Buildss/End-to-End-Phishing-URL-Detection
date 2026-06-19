@@ -1,0 +1,24 @@
+artifact_path: /Users/ankita/Documents/Project_Portfolio/LLMOPS/End to End Phishing
+  URL Detection/mlruns/1/models/m-7ea4992a3a3f43ffb9894b386a4161e4/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.13
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.9.0
+    skops_trusted_types: null
+mlflow_version: 3.13.0
+model_id: m-7ea4992a3a3f43ffb9894b386a4161e4
+model_size_bytes: 303392
+model_uuid: m-7ea4992a3a3f43ffb9894b386a4161e4
+prompts: null
+run_id: 531de630c6fd4e5ebeafa25482ee4123
+utc_time_created: '2026-06-19 17:14:44.363331'

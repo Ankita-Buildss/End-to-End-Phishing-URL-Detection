@@ -49,23 +49,23 @@ Build an end-to-end machine learning system that classifies URLs as **phishing o
 <table>
   <tr>
     <td align="center">
-      <b>XGB</b><br>
-      <img src="images/result1.png" width="400"/>
+      <b>XGB (Legit)</b><br>
+      <img src="images/xgb_legit.png" width="400"/>
     </td>
     <td align="center">
-      <b>ANN</b><br>
-      <img src="images/result2.png" width="400"/>
+      <b>ANN (Legit)</b><br>
+      <img src="images/ann_legit.png" width="400"/>
     </td>
   </tr>
 
   <tr>
     <td align="center">
-      <b>XGB</b><br>
-      <img src="images/result3.png" width="400"/>
+      <b>XGB (Phishing)</b><br>
+      <img src="images/xgb_phishing.png" width="400"/>
     </td>
     <td align="center">
-      <b>ANN</b><br>
-      <img src="images/result4.png" width="400"/>
+      <b>ANN (Phishing)</b><br>
+      <img src="images/ann_phishing.png" width="400"/>
     </td>
   </tr>
 </table>
